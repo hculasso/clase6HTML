@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Paleta de colores */
+.colores {
+    color: #07020D;
+    color: #5DB7DE;
+    color: #F1E9DB;
+    color: #A39B8B;
+    color: #716A5C;
+}
+
+section{                /* la variable a aplicar debe estar cerca de un section*/
+    --color--titular: red;
+}
+
+/* o */
+
+:root {
+    --color-negro: #07020D;
+    --color-acento: #5DB7DE;
+    --color-base: #F1E9DB;
+    --color-marron-100: #A39B8B;
+    --color-marron-200: #716A5C;
+    --ancho-de-secciones: 1500px;
+    --tamaño-de-fuentes: 50px;
+    --tipografía: ;
+    
+}
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--color-base);
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/*------------ Encabezado y barra de navegación -----------*/
+header {
+    background-color: var(--color-negro);
+    text-align: center;
+    padding: 32px;
+    border-bottom: 5px solid var(--color-acento);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    gap: 32px;
+}
+
+/* Estilos para los links de la barra de navegación */
+/* estado en reposo */
+a.nav:link {
+    text-decoration: none;
+    color: #F1E9DB;
+}
+
+/* link visitado */
+a.nav:visited {
+    color: #F1E9DB;
+}
+
+/* cuando le pasamos por encima con el cursor */
+a.nav:hover {
+    color: #5DB7DE;
+}
+
+/* cuando le hacemos click al elemento */
+a.nav:active {
+    color: #5DB7DE;
+}
+
+/* Sección de Bienvenida */
+#bienvenida {
+    width: 1100px;
+    height: 650px;
+    margin: 25px auto;
+
+    background-image: url('../img/bienvenida.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bienvenida h1 {
+    background-color: #07020dad;
+    color: var(--color--titular);
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0;
+    height: 650px;
+    line-height: 650px;
+}
+
+/* Novedades */
+.contenedor-novedades {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 247px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 4px;
+}
+
+article h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
+
+article h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+article a:link {
+    padding: 8px;
+    border: 2px solid #5DB7DE;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* Contacto y formularios */
+#contacto > form {
+    width: 500px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+#contacto label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#contacto input,
+#contacto textarea,
+#contacto select {
+    width: 350px;
+    padding: 8px 12px;
+    border: none;
+    border-bottom: 2px solid #716A5C;
+    background-color: #f4f3f1;
+}
+
+#contacto .opcion {
+    width: auto;
+}
+
+#contacto button {
+    width: 350px;
+    padding: 8px 12px;
+    border: none;
+    border-bottom: 2px solid #716A5C;
+    background-color: #5DB7DE;
+    color: #07020D;
+    font-weight: 600;
+}
+
+#contacto input:focus,
+#contacto input:hover,
+#contacto select:focus,
+#contacto select:hover,
+#contacto textarea:focus,
+#contacto textarea:hover {
+    border-bottom: 2px solid #5DB7DE;
+}
+
+/* Catálogo */
+#catalogo table {
+    border: 3px solid black;
+    width: 950px;
+    margin: 0 auto;
+    /* border-collapse controla el márgen entre celdas */
+    border-collapse: collapse;
+
+}
+
+#catalogo th,
+#catalogo td {
+    /* border: 3px solid black; */
+    padding: 16px;
+}
+
+#catalogo th {
+    background-color: #5DB7DE;
+}
+
+#catalogo img {
+    width: 150px;
+}
+
+/* even: par, odd: impar */
+#catalogo tr:nth-child(even) {
+    background-color: #A39B8B;
+}
+
+#catalogo tr:hover {
+    background-color: #5DB7DE;
+}
+
+/* Sobre Nosotros */
+#sobrenosotros {
+    padding-top: 16px;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#sobrenosotros video {
+    width: 550px;
+}
+
+.contenido {
+    display: flex;
+    gap: 16px;
+    text-align: left;
+}
+
+#sobrenosotros iframe {
+    width: 1000px;
+    height: 300px;
+    margin-top: 16px;
+    border: none;
+}
+
+.videoYT {
+    width: 560px;
+    height: 315px;
+    border: none;
+}

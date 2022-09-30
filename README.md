@@ -1,2 +1,2 @@
-# clase6HTML
-Apuntes de repositorio  github de clase 6 de html
+# clase-6-html
+Apuntes de la clase 6 de HTML/CSS

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Paleta de colores */
+.colores {
+    color: #07020D;
+    color: #5DB7DE;
+    color: #F1E9DB;
+    color: #A39B8B;
+    color: #716A5C;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #07020D;
+    color: #F1E9DB;
+}
+
+h1 {
+    color: #5DB7DE;
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+/* Contenedor y los items */
+
+.contenedor {
+    border: 2px solid #5DB7DE;
+    padding: 16px;
+
+    height: 850px;
+
+    display: flex;
+    flex-direction: row; /* dirección del eje principal */
+    justify-content: flex-start; /* alineación sobre el eje principal */
+    align-items: stretch; /* alineación sobre el eje secundiario*/
+    gap: 16px;
+
+    /* flex-wrap: wrap; */
+}
+
+.item {
+    background-color: #5DB7DE;
+    color: #07020D;
+    padding: 16px;
+}
+
+.item-1 {
+    flex-shrink: 4; /* controla como se "contrae" */
+    
+    flex-grow: 1; /* controla el crecimiento del elemento cuando tenemos más espacio */
+    
+    flex-basis: 250px; /* es el tamaño base del elemento */
+    height: 150px;
+}
+
+.item-2 {
+    flex-shrink: 0; /* controla como se "contrae" */
+    
+    flex-grow: 3; /* controla el crecimiento del elemento cuando tenemos más espacio */
+    
+    flex-basis: 250px; /* es el tamaño base del elemento */
+    height: 250px;
+}
+
+.item-3 {
+    flex-shrink: 1; /* controla como se "contrae" */
+    
+    flex-grow: 1; /* controla el crecimiento del elemento cuando tenemos más espacio */
+    
+    flex-basis: 250px; /* es el tamaño base del elemento */
+    height: 300px;
+}
